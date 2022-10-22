@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <Button fx:id="exit" layoutX="444.0" layoutY="343.0" mnemonicParsing="false" onAction="#Onexit" prefHeight="33.0" prefWidth="64.0" text="Exit" />
+      <Button fx:id="logout" graphicTextGap="40.0" layoutX="342.0" layoutY="343.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="33.0" prefWidth="84.0" text="Logout" />
+      <MenuBar layoutX="4.0" layoutY="8.0" prefHeight="25.0" prefWidth="171.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#Onexit" text="Close" />
+              <MenuItem fx:id="menuLogout" mnemonicParsing="false" onAction="#onLogout" text="Logout" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" text="Undo" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help" />
+        </menus>
+      </MenuBar>
+      <VBox layoutX="20.0" layoutY="50.0" prefHeight="184.0" prefWidth="187.0" spacing="6.0">
+         <children>
+            <RadioButton fx:id="rdJava" mnemonicParsing="false" selected="true" text="JAVA" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="programmingLang" />
+               </toggleGroup>
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+            </RadioButton>            <RadioButton fx:id="rdCsharp" mnemonicParsing="false" text="C#" textFill="WHITE" toggleGroup="$programmingLang">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="rdCp" mnemonicParsing="false" text="C++" textFill="WHITE" toggleGroup="$programmingLang">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="rdOther" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$programmingLang">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+            <ChoiceBox fx:id="chExpLevel" prefHeight="25.0" prefWidth="162.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="btnDSelection" layoutX="39.0" layoutY="347.0" mnemonicParsing="false" onAction="#onDSelection" prefHeight="25.0" prefWidth="125.0" text="Display  Selection" />
+      <Label fx:id="lblshowSelection" layoutX="20.0" layoutY="246.0" prefHeight="67.0" prefWidth="162.0" />
+      <TextArea fx:id="Editor" layoutX="323.0" layoutY="21.0" prefHeight="194.0" prefWidth="233.0" style="-fx-background-color: blue;" />
+      <Button fx:id="Save" layoutX="343.0" layoutY="246.0" mnemonicParsing="false" onAction="#OnSave" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: GREEN;" text="Save" textAlignment="RIGHT" textFill="#fff1f1" />
+      <Button fx:id="Open" layoutX="448.0" layoutY="246.0" mnemonicParsing="false" onAction="#OnOpen" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: BLUE;" text="Open" textFill="#fcfcfc" />
+      <TextField fx:id="txtOnlyNumbers" layoutX="182.0" layoutY="343.0" onKeyPressed="#getOwnText" onKeyTyped="#OnKeyTypedNumber" prefHeight="33.0" prefWidth="135.0" promptText="Accept Numbers Only" />
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="342.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8_close_240px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="18.0" layoutX="448.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8_portal_logo_512px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="18.0" layoutX="454.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../AppData/Local/Temp/icons8_opened_folder_500px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="32.0" layoutX="345.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../AppData/Local/Temp/icons8_download_from_the_cloud_500px_1.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--<?import javafx.scene.image.Image?>-->
+
+<AnchorPane blendMode="MULTIPLY" prefHeight="364.0" prefWidth="449.0" style="-fx-background-color: brown; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <Button fx:id="loginbutton" layoutX="218.0" layoutY="236.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="36.0" prefWidth="60.0" style="-fx-background-color: green; -fx-background-radius: 7;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelbutton" alignment="CENTER" layoutX="334.0" layoutY="236.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="36.0" prefWidth="60.0" style="-fx-background-color: blue; -fx-background-radius: 7;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="username" alignment="CENTER" layoutX="201.0" layoutY="57.0" prefHeight="51.0" prefWidth="219.0" promptText="USERNAME" />
+      
+      <Label fx:id="invalidlabel" alignment="CENTER" layoutX="205.0" layoutY="287.0" prefHeight="21.0" prefWidth="212.0" text="Please Enter Your Login Details" textFill="#fffefe">
+         <font>
+            <Font name="Century Gothic Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="registerlabel" alignment="CENTER" layoutX="205.0" layoutY="336.0" onMouseClicked="#onRegister" prefHeight="21.0" prefWidth="212.0" text="REGISTER" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="14.0" />
+         </font>
+      </Label>
+
+      <PasswordField fx:id="password" alignment="CENTER" layoutX="202.0" layoutY="148.0" prefHeight="43.0" prefWidth="219.0" promptText="PASSWORD" />
+      <ImageView blendMode="LIGHTEN" fitHeight="75.0" fitWidth="69.0" layoutX="118.0" layoutY="34.0">
+         <image>
+            <Image url="@images/decision_96px%20-%20Copy.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="LIGHTEN" fitHeight="75.0" fitWidth="69.0" layoutX="119.0" layoutY="125.0">
+         <image>
+            <Image url="@images/access_96px.png" />
+         </image>
+      </ImageView>
+      <!--<Icon content="CONTACTS" layoutX="61.0" layoutY="57.0" prefHeight="43.0" prefWidth="51.0" />-->
+     <!-- <FontAwesomeIconView glyphName="USER" layoutX="137.0" layoutY="103.0" size="24" tabSize="12" text="" wrappingWidth="18.300000190734863" />-->
+   </children>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>

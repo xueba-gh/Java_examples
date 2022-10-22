@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="276.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.survey.HelloController">
+   <children>
+      <VBox layoutX="13.0" layoutY="11.0" prefHeight="179.0" prefWidth="600.0" spacing="6.0">
+         <children>
+            <Label fx:id="question_1" prefHeight="30.0" prefWidth="585.0" text="2. Do you think the existing government is going in the right direction to benefit the people of the country?" />
+            <RadioButton fx:id="rdYes_2" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="question2_answers" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdNo_2" mnemonicParsing="false" text="No" textFill="#140303" toggleGroup="$question2_answers">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdHave_no_idea_2" mnemonicParsing="false" text="Have No Idea" textFill="#1b0808" toggleGroup="$question2_answers">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="Next" layoutX="523.0" layoutY="230.0" mnemonicParsing="false" onAction="#OnNext1" prefHeight="25.0" prefWidth="67.0" text="Next" />
+   </children>
+</AnchorPane>

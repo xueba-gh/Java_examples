@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="310.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.survey.HelloController">
+   <children>
+      <VBox layoutX="6.0" layoutY="14.0" prefHeight="163.0" prefWidth="524.0" spacing="6.0">
+         <children>
+            <Label fx:id="question_1" prefHeight="30.0" prefWidth="502.0" text="3. Which party do you support to handle sensitive topics such as national security?" />
+            <RadioButton fx:id="rdNPP_3" mnemonicParsing="false" selected="true" text="New Patriotic Party (NPP)">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="question3_answers" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdNDC_3" mnemonicParsing="false" text="National Democratic Congress (NDC)" textFill="#1b0808" toggleGroup="$question3_answers">
+               <font>
+                  <Font name="Candara" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdPPP_3" mnemonicParsing="false" text="Progressive People's Party (PPP)" textFill="#1b0808" toggleGroup="$question3_answers">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdGUM_3" mnemonicParsing="false" text="Ghana Union Movement GUM" toggleGroup="$question3_answers">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="Next" layoutX="398.0" layoutY="237.0" mnemonicParsing="false" onAction="#OnNext2" prefHeight="30.0" prefWidth="83.0" text="Next" />
+   </children>
+</AnchorPane>

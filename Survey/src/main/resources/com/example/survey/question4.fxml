@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="296.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.survey.HelloController">
+   <children>
+      <VBox layoutX="17.0" layoutY="21.0" prefHeight="163.0" prefWidth="499.0" spacing="6.0">
+         <children>
+            <Label fx:id="question_4" prefHeight="30.0" prefWidth="502.0" text="4. How likely are you to vote in the coming elections?" />
+            <RadioButton fx:id="rdCertain_to_vote4" mnemonicParsing="false" selected="true" text="Certain to vote">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="question4_answers" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdProbably_wont_vote4" mnemonicParsing="false" text="Probably won’t vote" textFill="#1b0808" toggleGroup="$question4_answers">
+               <font>
+                  <Font name="Candara" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdMostly_likely_to_vote4" mnemonicParsing="false" text="Most likely to vote" textFill="#1b0808" toggleGroup="$question4_answers">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdDont_know4" mnemonicParsing="false" text="Don’t know" toggleGroup="$question4_answers">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="Next" layoutX="405.0" layoutY="243.0" mnemonicParsing="false" onAction="#OnNext3" prefHeight="25.0" prefWidth="62.0" text="Next" />
+   </children>
+</AnchorPane>

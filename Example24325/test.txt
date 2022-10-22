@@ -1,0 +1,5 @@
+NAME    GENDER  AGE     RICH
+Kofi    M       23.6    TRUE
+AMA     F       26.1    TRUE
+JOHN    M       40      FALSE
+MIKE    M       28      TRUE

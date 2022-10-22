@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="543.0" style="-fx-background-radius: 12; -fx-border-radius: 12;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.survey.HelloController">
+   <children>
+      <Label layoutX="55.0" layoutY="22.0" prefHeight="35.0" prefWidth="439.0" text="WELCOME TO THE POLITICAL SURVEY" textFill="#a10a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="startSurvey" layoutX="230.0" layoutY="201.0" mnemonicParsing="false" onAction="#StartSurvey" prefHeight="35.0" prefWidth="109.0" style="-fx-background-radius: 12; -fx-background-color: yellow;" text="Start Survey" />
+      <Label layoutX="70.0" layoutY="81.0" prefHeight="17.0" prefWidth="175.0" text="Follow the Instructions Below:" textFill="#110404">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="110.0" prefHeight="17.0" prefWidth="404.0" text="1. Provide Your Name, Age and Gender before you start the Survey">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="151.0" prefHeight="17.0" prefWidth="334.0" text="2. Select All Answers You think It is Favorable and Correct" />
+   </children>
+</AnchorPane>
